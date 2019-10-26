@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+   <head>
+      <meta charset="UTF-8">
+      <title>Admin Dashboard</title>
+      <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+      <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+      <link rel="stylesheet" href="static/style.css">
+	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+   </head>
+   <body>
+      <!-- partial:index.partial.html -->
+      <div class="admin">
+         <header class="admin__header">
+            <a href="#" class="logo">
+               <h1>Bastau Team</h1>
+            </a>
+            <div class="toolbar">
+               <a href="#" class="logout">
+               Log Out
+               </a>
+            </div>
+         </header>
+         <nav class="admin__nav">
+            <ul class="menu">
+               <li class="menu__item">
+                  <a class="menu__link" href="">Home</a>
+                  <a href="dash.html"></a>
+               </li>
+               <li class="menu__item">
+                  <a class="menu__link" href="stats">Driver Stats</a>
+                  <a href="graphs.html"></a>
+               </li>
+               <li class="menu__item">
+                  <a class="menu__link" href="criminal">Criminal Recognition</a>
+                  <a href="stream.html"></a>
+               </li>
+               <li class="menu__item">
+                  <a class="menu__link" href="feedback">Feedback</a>
+                  <a href="report.html"></a>
+               </li>
+            </ul>
+
+         </nav>
+         <main class="admin__main">
+            <div class="dashboard">
+               <div class="dashboard__item">
+                  <div class="card" >
+                      <div class="thecard">
+                         <div class="card-img">
+                           <img src="https://www.clubzak.com/media/pictures/f1629540-704a-463f-9150-41a33563c33c.jpg" alt="centered image">
+                         </div>
+                       <div class="card-caption">
+                        <h1>ID: 030215651147</h1>
+                        <p>Driver of #32 - Ospanova Shyryn</p>
+                       </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="dashboard__item">
+                  <div class="card-2" >
+
+
+                       <div class="card-caption-2">
+                        <h1>Today registered:</h1>
+                        <p>2319</p>
+                       </div>
+
+                  </div>
+               </div>
+               <div class="dashboard__item dashboard__item--full">
+                  <div class="card">
+                    <div id="div_plot"></div>
+                  <script src="static/dash.js"></script>
+                  </div>
+               </div>
+            </div>
+         </main>
+      </div>
+      <!-- partial -->
+   </body>
+</html>
